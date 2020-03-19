@@ -17,6 +17,8 @@ O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros"
 
 */
 
+console.log('****** MÓDULO 01 - DESAFIO 1 *****');
+
 var endereco = {
     rua: "Rua dos pinheiros",
     numero: 1293,
