@@ -5,21 +5,19 @@
     </head>
     <body>
         <script>
-            // for, while
-
-            // Quando usar o for ? Somente quando eu sei o tamanho
-            // for (var i = 0; i <= 100; i++) {
-            //     console.log(i);
-            // }
-
-
-            // Quando usar o while ? Somente quando eu não sei o tamanho e nem controla o tamanho de interação a ser feito
-            var j = 29324376543;
-            while (j > 50) {
-                console.log(j);
-
-                j /= 5;
+            var teste = 2;
+            function exibeAlgo() {
+                console.log(teste += 1);
             }
+
+            // executa a função
+            setInterval(exibeAlgo(), 1000);
+
+            // passa a função como parametro
+            setInterval(exibeAlgo, 1000);
+
+            // só executa em 5 segundos
+            setTimeout(exibeAlgo, 5000);
         </script>
     </body>
 </html>
