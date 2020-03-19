@@ -4,15 +4,14 @@
     </head>
     <body>
         <script>
-            var x = 10, y = 5;
+            function soma(numero1, numero2) {
+                var resultado = numero1 + numero2;
 
-            x += 10; // 20
-            x *= 10; //100
-            x /= 10; //1
-            x -= 10; //0
-            x %= 10; //0
+                return resultado;
+            }
 
-            console.log(x);
+            var resultado = soma(1, 2);
+            console.log(resultado);
         </script>
     </body>
 </html>
