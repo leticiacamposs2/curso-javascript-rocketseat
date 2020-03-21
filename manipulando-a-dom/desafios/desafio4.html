@@ -1,0 +1,54 @@
+<!-- 
+    4º Desafio:
+    Seguindo o resultado do exercício 3 
+    adicione um input em tela e um botão como a seguir:
+
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    Ao clicar no botão, a função adicionar() 
+    deve ser disparada adicionando um novo item a lista de
+    nomes baseado no nome preenchido no input 
+    e renderizando o novo item em tela juntos aos
+    demais itens anteriores. 
+    Além disso, o conteúdo do input deve ser apagado após o clique.
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 02 - Desafio 4</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul></ul>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+    </div>
+
+    <script>
+        var listElement = document.querySelector('#app ul');
+
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+        function renderNomes() {
+            for (nome of nomes) {
+                var nomeElement = document.createElement('li');
+                var nomeText = document.createTextNode(nome);
+
+                nomeElement.appendChild(nomeText);
+                listElement.appendChild(nomeElement);
+            }
+        }
+
+        renderNomes();
+
+        function adicionar() {
+            console.log('passei por aqui');
+        }
+    </script>
+</body>
+
+</html>
