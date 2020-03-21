@@ -30,10 +30,14 @@
 
     <script>
         var listElement = document.querySelector('#app ul');
+        var inputElement = document.querySelector('#app input');
+        var buttonElement = document.querySelector('#app button');
 
         var nomes = ['Diego', 'Gabriel', 'Lucas'];
 
         function renderNomes() {
+            listElement.innerHTML = '';
+
             for (nome of nomes) {
                 var nomeElement = document.createElement('li');
                 var nomeText = document.createTextNode(nome);
@@ -46,8 +50,14 @@
         renderNomes();
 
         function adicionar() {
-            console.log('passei por aqui');
+            var nomeText = inputElement.value;
+
+            nomes.push(nomeText);
+            inputElement.value = '';
+            renderNomes();
         }
+
+        buttonElement.onclick = adicionar;
     </script>
 </body>
 
