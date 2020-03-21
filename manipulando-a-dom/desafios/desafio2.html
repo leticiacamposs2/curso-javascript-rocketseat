@@ -1,0 +1,50 @@
+<!-- 
+    2º Desafio
+    Utilizando o resultado do primeiro desafio, 
+    toda vez que o usuário passar o mouse por cima de
+    algum quadrado troque sua cor para uma cor aleatória 
+    gerada pela função getRandomColor()
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 02 - Desafio 1</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="geraBox()">Gera Box</button>
+        <div onmouseover="trocaCor()" id="testeBox"></div>
+    </div>
+
+    <script>
+
+        function geraBox() {
+            var boxElement = document.createElement('p');
+            document.body.appendChild(boxElement)
+
+            var box = document.querySelector('#testeBox');
+            box.appendChild(boxElement);
+
+            boxElement.style.width = 100; //define a largura
+            boxElement.style.height = 100; //define a altura
+            boxElement.style.backgroundColor = '#f00'; //define a cor de fundo
+        }
+
+        function trocaCor() {
+            var boxTeste = document.querySelector('#app p');
+            boxTeste.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
