@@ -1,0 +1,39 @@
+<!-- 
+    3º Desafio:
+    A partir do seguinte vetor: 
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+    ● Diego
+    ● Gabriel
+    ● Lucas
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 02 - Desafio 3</title>
+</head>
+<body>
+    <div id="app">
+        <ul></ul>
+    </div>
+
+    <script>
+        var listElement = document.querySelector('#app ul');
+
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+        function renderNomes() {
+            for (nome of nomes) {
+                var nomeElement = document.createElement('li');
+                var nomeText = document.createTextNode(nome);
+
+                nomeElement.appendChild(nomeText);
+                listElement.appendChild(nomeElement);
+            }
+        }
+
+        renderNomes();
+    </script>
+</body>
+</html>
